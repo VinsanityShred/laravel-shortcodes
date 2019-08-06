@@ -145,7 +145,7 @@ class ShortcodeCompiler
     // get view data
     public function viewData( $viewData )
     {
-        $this->_viewData = $viewData;
+        $this->_viewData = array_merge($this->_viewData ?? [], $viewData);
         return $this;
     }
 
